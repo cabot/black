@@ -1,4 +1,5 @@
-{% DEFINE NAV_SECTION = 'register' %}{% INCLUDE 'overall_header.html' %}
+{% DEFINE NAV_SECTION = 'register' %}
+{% INCLUDE 'overall_header.html' %}
 
 <script>
 	/**
@@ -38,7 +39,7 @@
 	{% EVENT ucp_register_credentials_before %}
 	<dl>
 		<dt><label for="username">{{ lang('USERNAME') ~ lang('COLON') }}</label><br /><span>{{ lang('USERNAME_EXPLAIN') }}</span></dt>
-		<dd><input type="text" tabindex="1" name="username" id="username" size="25" value="{{ USERNAME }}" class="inputbox autowidth" title="{{ lang('USERNAME') }}" /></dd>
+		<dd><input type="text" tabindex="1" name="username" id="username" size="25" value="{{ USERNAME }}" class="inputbox autowidth" title="{{ lang('USERNAME') }}" autocomplete="off" /></dd>
 	</dl>
 	<dl>
 		<dt><label for="new_password">{{ lang('PASSWORD') ~ lang('COLON') }}</label><br /><span>{{ lang('PASSWORD_EXPLAIN') }}</span></dt>
