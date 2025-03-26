@@ -346,8 +346,8 @@ function checkNavigation(force)
 			}
 
 			cloneClass = (
-					$this.attr('data-responsive-class') === undefined ? 
-						($this.hasClass('small-icon') ? $this.attr('class') : '') : 
+					$this.attr('data-responsive-class') === undefined ?
+						($this.hasClass('small-icon') ? $this.attr('class') : '') :
 						$this.attr('data-responsive-class')
 				) + ' responsive-index-' + i;
 
@@ -469,8 +469,8 @@ function initResponsiveNavigation()
 			}
 			// Secondary menu
 			lists.eq(0).prepend('<li class="responsive-menu dropdown-container" style="display: none;"><a href="#" class="dropdown-trigger dropdown-toggle">...</a>' +
-					'<div class="dropdown hidden">' + 
-						'<div class="pointer"><div class="pointer-inner"></div></div>' + 
+					'<div class="dropdown hidden">' +
+						'<div class="pointer"><div class="pointer-inner"></div></div>' +
 						'<ul class="dropdown-contents" /></ul>' +
 					'</div>' +
 				'</li>');
@@ -631,17 +631,6 @@ function parseDocument($container) {
 			}
 		}, 100);
 	});
-
-	/**
-	* Adjust HTML code for IE8 and older versions
-	*/
-	// if (oldBrowser) {
-	// 	// Fix .linklist.bulletin lists
-	// 	$container
-	// 		.find('ul.linklist.bulletin > li')
-	// 		.filter(':first-child, .rightside:last-child')
-	// 		.addClass('no-bulletin');
-	// }
 
 	/**
 	* Resize navigation (breadcrumbs) block to keep all links on same line
