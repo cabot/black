@@ -448,6 +448,10 @@
 		clear: both;
 	}
 
+	.avatar-rank-container {
+		max-width: 100%;
+	}
+
 	/* Polls
 	----------------------------------------*/
 	fieldset.polls dt {
@@ -471,7 +475,7 @@
 	.postbody {
 		position: inherit;
 	}
-	
+
 	.postbody {
 		.postprofile + & {
 		float: none;
@@ -479,7 +483,7 @@
 		width: auto;
 		}
 	}
-	
+
 	.postprofile, .postbody, .search .postbody {
 		display: block;
 		width: auto;
@@ -644,7 +648,7 @@
 	}
 
 	ul.topiclist dd.lastpost {
-  		float: right; 
+  		float: right;
   	}
 
 	dd.posts, dd.topics, dd.views {
