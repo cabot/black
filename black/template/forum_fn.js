@@ -1031,7 +1031,7 @@ function parseDocument($container) {
 
 		// Find all headers, get contents
 		$list.prev('.topiclist').find('li.header dd').not('.mark').each(function() {
-			headers.push($(this).text());
+			headers.push($("<div>").text($(this).text()).html());
 			headersLength++;
 		});
 
@@ -1134,7 +1134,9 @@ function parseDocument($container) {
 				}
 
 				if ((text.length && text !== '-') || cell.children().length) {
-					cell.prepend('<dfn style="display: none;">' + headers[column] + '</dfn>');
+					if (headers[column].length) {
+						cell.prepend($("<dfn>").css('display', 'none').text(headers[column]));
+					}
 				} else {
 					cell.addClass('empty');
 				}
